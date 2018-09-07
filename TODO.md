@@ -1,4 +1,28 @@
-# MVP
+# Kane's MVP checklist
+
+- [ ]  Upload a image from local drive
+- [ ]  Upload multiple images from local drive
+- [ ]  Add a button that allows you to re-populate previously uploaded images
+- [ ]  Add a comment bar below each image
+- [ ]  Include upvote button below each image
+- [ ]  Incorporate CSS styles
+  - [ ]  Make the header
+  - [ ]  Position images and text
+  - [ ]  Style the background and text
+ 
+# Time and difficulty 
+
+  5 = 3 hours
+  7 = 5 hours
+  10 = full day + ??
+
+* (10) Upload an image and multiple images from local drive
+* (7) Add a button that allows you to re-populatee previously uploaded images
+* (5) Add a comment bar and upvote button below each image
+* (5) Incorporate CSS styles
+
+
+<!-- # MVP
 - [√] store items
  - [√] create new item
  - [√] select item
@@ -32,7 +56,6 @@
 
   - [ ] factor out common functionality
   - [ ] testing
-
 
   ## Feature list
   * denotes on my to do for the project
@@ -73,9 +96,7 @@
   strike-through completed/deleted items (styling)
   add more items button, that shows another input section allowing for multiple items to be added at once
   Fun stuff
-  auto-complete when searching/filtering
-
-
+  auto-complete when searching/filtering -->
 
 
 
