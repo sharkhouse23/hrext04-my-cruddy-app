@@ -1,14 +1,14 @@
 # Kane's MVP checklist
 
-- [ ]  Upload a image from local drive
-- [ ]  Upload multiple images from local drive
-- [ ]  Add a button that allows you to re-populate previously uploaded images
-- [ ]  Add a comment bar below each image
-- [ ]  Include upvote button below each image
-- [ ]  Incorporate CSS styles
-  - [ ]  Make the header
-  - [ ]  Position images and text
-  - [ ]  Style the background and text
+- [√]  Upload a image from local drive
+- [√]  Upload multiple images from local drive
+- [X]  Add a button that allows you to re-populate previously uploaded images
+- [X]  Add a comment bar below each image
+- [X]  Include upvote button below each image
+- [√]  Incorporate CSS styles
+  - [√]  Make the header
+  - [√]  Position images and text
+  - [√]  Style the background and text
  
 # Time and difficulty 
 
@@ -16,10 +16,10 @@
   7 = 5 hours
   10 = full day + ??
 
-* (10) Upload an image and multiple images from local drive
-* (7) Add a button that allows you to re-populatee previously uploaded images
-* (5) Add a comment bar and upvote button below each image
-* (5) Incorporate CSS styles
+* (10) Upload an image and multiple images from local drive (completed)
+* (7) Add a button that allows you to re-populate previously uploaded images (spent more than 5 hours on this, can't seem to find a way to implement this feature into the code)
+* (5) Add a comment bar and upvote button below each image (spent too much time trying to figure out how to add the upload and re-populate feature, didn't have enough time to implement this)
+* (5) Incorporate CSS styles (completed)
 
 
 <!-- # MVP

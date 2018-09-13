@@ -1,40 +1,61 @@
 $(document).ready(function() {
 
+  var imgPreview = function(input, insertPicture) {
 
-  $(".add-text-btn").on("click", function(){
+  if (input.files) {
+      var fileCount = input.files.length;
 
-    // store values
-    let inputKey = $(".user-input-title").val();
-    let inputValue = $(".user-input-body").val();
+      for (i = 0; i < fileCount; i++) {
+        var reader = new FileReader();
 
-    // clear values
-    $(".user-input-title").val("");
-    $(".user-input-body").val("");
+        reader.onload = function(event) {
+          // $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(insertPicture);
+          $("#photos").append('<div class="squared-box"><img src="'+event.target.result+'" class="img-thumbnail"></div>');
+        }
+          reader.readAsDataURL(input.files[i]);
+      }
+    }
+  };
 
-    console.log(inputKey, inputValue);
-
-    localStorage.setItem(inputKey, inputValue);
-    // data-
-    let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
-    $(".display").html(itemHtml);
-    //console.log(localStorage);
-    // how can we delegate this event to the outer html node?
-    // https://learn.jquery.com/events/event-delegation/
-
-    $(".display-item").on("click", function(e){
-      // plop the key:value back into the input boxes
-
-      // get the values from the the divs?
-      console.log("key=> ", e.target.dataset.storageKey); // user-input-title
-      localStorage.getItem(e.target.dataset.storageKey); // user-input-body
-
-      // set those values in the form fields
-      $(".user-input-title").val(e.target.dataset.storageKey);
-      $(".user-input-body").val(localStorage.getItem(e.target.dataset.storageKey));
-    });
-
+  $('.gallery-pic-add').on('change', function() {
+  imgPreview(this, 'div.gallery');
   });
 
+
+
+  // $(".add-text-btn").on("click", function(){
+
+  //   // store values
+  //   let inputKey = $(".user-input-title").val();
+  //   let inputValue = $(".user-input-body").val();
+
+  //   // clear values
+  //   $(".user-input-title").val("");
+  //   $(".user-input-body").val("");
+
+  //   console.log(inputKey, inputValue);
+
+  //   localStorage.setItem(inputKey, inputValue);
+  //   // data-
+  //   let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
+  //   $(".display").html(itemHtml);
+  //   //console.log(localStorage);
+  //   // how can we delegate this event to the outer html node?
+  //   // https://learn.jquery.com/events/event-delegation/
+
+  //   $(".display-item").on("click", function(e){
+  //     // plop the key:value back into the input boxes
+
+  //     // get the values from the the divs?
+  //     console.log("key=> ", e.target.dataset.storageKey); // user-input-title
+  //     localStorage.getItem(e.target.dataset.storageKey); // user-input-body
+
+  //     // set those values in the form fields
+  //     $(".user-input-title").val(e.target.dataset.storageKey);
+  //     $(".user-input-body").val(localStorage.getItem(e.target.dataset.storageKey));
+  //   });
+
+  // });
 
 
    // TODO add back in later
@@ -44,15 +65,19 @@ $(document).ready(function() {
    //   $(".display").text(localStorage.getItem("testStorage"));
    // });
 
-   $(".del-text-btn").on("click", function() {
-     alert('item deleted? check the console'); // maybe change to a window.confirm
-     localStorage.removeItem( $('.user-input-title').val() ); // grab the title and plop here
-     $(".user-input-title").val("");
-     $(".user-input-body").val("");
-     // clearing display? what if I have multiple items?
-     // after item is removed from local storage, redisplay items from local storage
-     // refresh from storage?
-   });
+   // $(".del-text-btn").on("click", function() {
+   //   alert('item deleted? check the console'); // maybe change to a window.confirm
+   //   localStorage.removeItem( $('.user-input-title').val() ); // grab the title and plop here
+   //   $(".user-input-title").val("");
+   //   $(".user-input-body").val("");
+   //   // clearing display? what if I have multiple items?
+   //   // after item is removed from local storage, redisplay items from local storage
+   //   // refresh from storage?
+   // });
+
+
+
+
 
 
    // iterative approach to adding items
